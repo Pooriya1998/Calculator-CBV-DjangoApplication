@@ -1,9 +1,10 @@
-{% load static %}
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 <div class="contrainer">
     <div class="calculator">
-        <form>
+        <form method="post" role="form" action="{% url 'calculator:post_create' %}">
+            {% csrf_token %}
             <div class="display"> 
                 <input type="text" name="display">
             </div>
@@ -34,7 +35,8 @@
             <div>
                 <input type="button" value="00" onclick="display.value += '00' ">
                 <input type="button" value="0" onclick="display.value += '0' ">
-                <input type="button" value="=" onclick="display.value = eval(display.value) " class="equal operator">
+                <input type="button" value="=" onclick="display.value = eval(display.value)" class="operator">
+                <input type="submit" name="title" value="Save" class="operator">
             </div>
         </form>
     </div>

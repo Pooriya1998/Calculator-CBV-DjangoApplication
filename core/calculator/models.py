@@ -5,11 +5,11 @@ from django.contrib.auth import get_user_model
 
 class Post(models.Model):
     '''
-    this is a class to define posts for blog app
+    this is a class to define posts for calculator app
     '''
     user = models.ForeignKey('accounts.profile', on_delete=models.CASCADE, null=True, blank=True)
-    title = models.CharField(max_length=255)
-    status = models.BooleanField(default=False)
+    title = models.CharField(max_length=250)
+
 
     created_date = models.DateTimeField(auto_now_add=True)
     updated_date = models.DateTimeField(auto_now=True)

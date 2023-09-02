@@ -5,7 +5,6 @@
     box-sizing: border-box;
 }
 
-
 .contrainer{
     width: 100%;
     height: 100vh;
@@ -47,11 +46,6 @@ form .display input {
     flex: 1;
     font-size: 45px;
     box-shadow: none;
-}
-
-
-form input.equal {
-    width: 145px;
 }
 
 
